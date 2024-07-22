@@ -8,7 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-image: url("D:/Book Haven/client-admin/public/img1.jpg"); /* Đường dẫn tới hình nền */
+  background-image: url("Book Haven/client-admin/public/img1.jpg"); /* Đường dẫn tới hình nền */
   background-size: cover; /* Đảm bảo hình nền phủ đầy */
   background-repeat: no-repeat; /* Không lặp lại hình nền */
   background-attachment: fixed; /* Giữ hình nền cố định khi cuộn */
@@ -179,7 +179,7 @@ form button:hover {
 
 /* Background for main content */
 .main-content-background {
-  background-image: url("D:/Book Haven/client-admin/public/img1.jpg"); /* Đường dẫn tới hình nền */
+  background-image: url("Book Haven/client-admin/public/img1.jpg"); /* Đường dẫn tới hình nền */
   background-size: cover; /* Đảm bảo hình nền phủ đầy */
   background-repeat: no-repeat; /* Không lặp lại hình nền */
   background-position: center; /* Canh giữa hình nền */
