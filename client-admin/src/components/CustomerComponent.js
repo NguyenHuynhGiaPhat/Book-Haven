@@ -149,6 +149,7 @@ class Customer extends Component {
         ) : (
           <div />
         )}
+        <img src="/img1.jpg" alt="" width="100px" height="100px" />
       </div>
     );
   }
@@ -212,3 +213,4 @@ class Customer extends Component {
 }
 
 export default Customer;
+
