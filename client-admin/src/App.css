@@ -179,7 +179,7 @@ form button:hover {
 
 /* Background for main content */
 .main-content-background {
-background-image: url("/img1.jpg"); /* Đường dẫn tới hình nền */
+  background-image: url("/img1.jpg"); /* Đường dẫn tới hình nền */
   background-size: cover; /* Đảm bảo hình nền phủ đầy */
   background-repeat: no-repeat; /* Không lặp lại hình nền */
   background-position: center; /* Canh giữa hình nền */
