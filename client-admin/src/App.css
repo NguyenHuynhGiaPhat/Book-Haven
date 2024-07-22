@@ -8,7 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-"${process.env.PUBLIC_URL}/img1.jpg"
+  background-image: url("${process.env.PUBLIC_URL}/img1.jpg");  
   background-size: cover; /* Đảm bảo hình nền phủ đầy */
   background-repeat: no-repeat; /* Không lặp lại hình nền */
   background-attachment: fixed; /* Giữ hình nền cố định khi cuộn */
@@ -179,7 +179,7 @@ form button:hover {
 
 /* Background for main content */
 .main-content-background {
-"${process.env.PUBLIC_URL}/img1.jpg"  background-size: cover; /* Đảm bảo hình nền phủ đầy */
+  background-image: url("${process.env.PUBLIC_URL}/img1.jpg");
   background-repeat: no-repeat; /* Không lặp lại hình nền */
   background-position: center; /* Canh giữa hình nền */
   padding: 2rem;
