@@ -67,7 +67,6 @@ class CategoryDetail extends Component {
             </tbody>
           </table>
         </form>
-        <img src="/img1.jpg" alt="" />
       </div>
     );
   }
