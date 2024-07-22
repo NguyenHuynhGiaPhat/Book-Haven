@@ -4,6 +4,9 @@ class Home extends Component {
   render() {
     return (
       <div className="main-content-background">
+        <div>
+          <img src="/img1.jpg" alt="beautiful scenery" />
+        </div>
         <div className="align-center">
           <h2
             className="text-center"
