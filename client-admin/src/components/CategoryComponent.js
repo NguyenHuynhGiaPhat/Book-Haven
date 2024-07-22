@@ -45,9 +45,6 @@ class Category extends Component {
             </tbody>
           </table>
         </div>
-        <div className="image-container">
-          <img src="/img1.jpg" alt="" />
-        </div>
       </div>
     );
   }
