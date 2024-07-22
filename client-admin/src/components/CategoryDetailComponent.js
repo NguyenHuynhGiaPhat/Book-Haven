@@ -11,6 +11,7 @@ class CategoryDetail extends Component {
       txtName: "",
     };
   }
+
   render() {
     return (
       <div className="category-detail">
@@ -66,9 +67,11 @@ class CategoryDetail extends Component {
             </tbody>
           </table>
         </form>
+        <img src="/img1.jpg" alt="" />
       </div>
     );
   }
+
   componentDidUpdate(prevProps) {
     if (this.props.item !== prevProps.item) {
       this.setState({
@@ -77,6 +80,7 @@ class CategoryDetail extends Component {
       });
     }
   }
+
   // event-handlers
   btnAddClick(e) {
     e.preventDefault();
@@ -88,6 +92,7 @@ class CategoryDetail extends Component {
       alert("Please input name");
     }
   }
+
   btnUpdateClick(e) {
     e.preventDefault();
     const id = this.state.txtID;
@@ -99,19 +104,7 @@ class CategoryDetail extends Component {
       alert("Please input id and name");
     }
   }
-  // apis
-  apiPutCategory(id, cate) {
-    const config = { headers: { "x-access-token": this.context.token } };
-    axios.put("/api/admin/categories/" + id, cate, config).then((res) => {
-      const result = res.data;
-      if (result) {
-        alert("You have done it successfully!");
-        this.apiGetCategories();
-      } else {
-        alert("Please try again!");
-      }
-    });
-  }
+
   btnDeleteClick(e) {
     e.preventDefault();
     if (window.confirm("ARE YOU SURE?")) {
@@ -123,19 +116,7 @@ class CategoryDetail extends Component {
       }
     }
   }
-  // apis
-  apiDeleteCategory(id) {
-    const config = { headers: { "x-access-token": this.context.token } };
-    axios.delete("/api/admin/categories/" + id, config).then((res) => {
-      const result = res.data;
-      if (result) {
-        alert("You have done it successfully!");
-        this.apiGetCategories();
-      } else {
-        alert("Please try again!");
-      }
-    });
-  }
+
   // apis
   apiPostCategory(cate) {
     const config = { headers: { "x-access-token": this.context.token } };
@@ -149,6 +130,33 @@ class CategoryDetail extends Component {
       }
     });
   }
+
+  apiPutCategory(id, cate) {
+    const config = { headers: { "x-access-token": this.context.token } };
+    axios.put("/api/admin/categories/" + id, cate, config).then((res) => {
+      const result = res.data;
+      if (result) {
+        alert("You have done it successfully!");
+        this.apiGetCategories();
+      } else {
+        alert("Please try again!");
+      }
+    });
+  }
+
+  apiDeleteCategory(id) {
+    const config = { headers: { "x-access-token": this.context.token } };
+    axios.delete("/api/admin/categories/" + id, config).then((res) => {
+      const result = res.data;
+      if (result) {
+        alert("You have done it successfully!");
+        this.apiGetCategories();
+      } else {
+        alert("Please try again!");
+      }
+    });
+  }
+
   apiGetCategories() {
     const config = { headers: { "x-access-token": this.context.token } };
     axios.get("/api/admin/categories", config).then((res) => {
@@ -157,4 +165,6 @@ class CategoryDetail extends Component {
     });
   }
 }
+
 export default CategoryDetail;
+
