@@ -1,0 +1,778 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #54fffc; /* Thêm màu nền */
+  background-size: cover; /* Đảm bảo hình nền phủ đầy */
+  background-repeat: no-repeat; /* Không lặp lại hình nền */
+  background-attachment: fixed; /* Giữ hình nền cố định khi cuộn */
+  background-position: center; /* Canh giữa hình nền */
+}
+
+/* Header */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.menu li {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  font-size: 1.5rem; /* Tăng kích thước chữ */
+}
+
+.menu li:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.user-info {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem; /* Tăng kích thước chữ */
+}
+
+.user-info a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.user-info b {
+  margin-right: 0.5rem;
+}
+
+/* Main Content */
+.main-content {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.align-center {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.align-valign-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.admin-home-title {
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 2.5rem; /* Tăng kích thước chữ */
+  font-weight: bold;
+}
+
+.admin-home-image {
+  display: block;
+  margin: 2rem auto;
+  width: 360px; /* Đảm bảo hình ảnh có kích thước phù hợp */
+  height: auto;
+}
+
+/* Table */
+.datatable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.datatable th,
+.datatable td {
+  border: 1px solid #ddd;
+  padding: 1rem; /* Tăng kích thước padding */
+  text-align: center;
+  font-size: 1.2rem; /* Tăng kích thước chữ */
+}
+
+.datatable th {
+  background-color: #333;
+  color: #fff;
+}
+
+.datatable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.datatable tr:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+form input,
+form select {
+  padding: 0.5rem;
+  font-size: 1.2rem; /* Tăng kích thước chữ */
+}
+
+form button {
+  padding: 0.5rem;
+  font-size: 1.2rem; /* Tăng kích thước chữ */
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+/* Background for main content */
+.main-content-background {
+  background-color: #a0d4ff; /* Thêm màu nền */
+  background-size: cover; /* Đảm bảo hình nền phủ đầy */
+  background-repeat: no-repeat; /* Không lặp lại hình nền */
+  background-position: center; /* Canh giữa hình nền */
+  padding: 2rem;
+}
+
+/* Login Form */
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000;
+}
+
+.login-form h2 {
+  font-size: 2rem; /* Tăng kích thước chữ */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.login-form label {
+  font-size: 1.5rem; /* Tăng kích thước chữ */
+  font-weight: bold; /* In đậm chữ */
+  margin-bottom: 0.5rem;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem; /* Tăng kích thước chữ */
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem; /* Tăng kích thước chữ */
+  font-weight: bold; /* In đậm chữ */
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #555;
+}
+/* New Category CSS */
+.category-container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(175, 160, 160, 0.7);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 25px;
+  font-weight: bold;
+}
+.category-list-container h2 {
+  border: 1px solid #000; /* Viền cho tiêu đề Category List */
+  padding: 5px; /* Đã giảm padding để thu nhỏ khung */
+  border-radius: 8px;
+  text-align: center;
+  margin: 0 auto; /* Canh giữa khung */
+  max-width: 400px; /* Điều chỉnh độ rộng của khung */
+  background: rgba(255, 255, 255, 0.8); /* Màu nền cho khung Category List */
+}
+.category-detail {
+  margin-bottom: 20px;
+}
+
+.category-list-container {
+  background: rgba(255, 255, 255, 0.8); /* Màu nền cho khung Category List */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border: 2px solid #000; /* Viền cho khung Category List */
+}
+
+.category-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000; /* Viền cho danh sách */
+}
+
+.category-table th,
+.category-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #000; /* Viền cho các ô */
+}
+
+.category-table th {
+  background-color: rgb(230, 8, 8);
+  color: rgb(0, 0, 0);
+}
+
+.category-table tr:nth-child(even) {
+  background-color: #8bc5f8;
+}
+
+.category-table tr:hover {
+  background-color: #ddd;
+}
+
+.datatable {
+  width: 100%;
+  border: 2px solid #000000;
+}
+
+/* Category Detail */
+.category-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 2px solid #000; /* Thêm viền cho Category List */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.category-detail form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.category-detail form table {
+  width: 100%;
+}
+
+.category-detail form td {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.category-detail form input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #a56b6b;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.category-detail form input[type="submit"] {
+  padding: 0.5rem 1rem;
+  border: 1px solid #908282;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.category-detail form input[type="submit"]:hover {
+  background-color: #ddd;
+}
+/* Product */
+/* Định dạng container cho Product */
+.product-container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(175, 160, 160, 0.7);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Định dạng chi tiết Product */
+.product-detail {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Điều chỉnh để căn ảnh lên trên */
+  flex-direction: row; /* Chuyển đổi hướng từ cột sang hàng */
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 2px solid #000; /* Thêm viền cho Product Detail */
+  font-size: 16px; /* Kích thước chữ cho toàn bộ Product Detail */
+}
+
+.product-detail h2 {
+  border: 1px solid #000; /* Viền cho tiêu đề Product Detail */
+  padding: 5px; /* Khoảng đệm */
+  border-radius: 8px; /* Bo tròn các góc */
+  text-align: center; /* Căn giữa tiêu đề */
+  margin-bottom: 10px; /* Khoảng cách dưới */
+  background: rgba(255, 255, 255, 0.8); /* Màu nền cho tiêu đề */
+  width: 100%;
+  font-size: 30px; /* Kích thước chữ cho tiêu đề */
+}
+
+.product-detail form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-detail form table {
+  width: 100%;
+}
+
+.product-detail form td {
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 20px; /* Kích thước chữ cho các phần tử trong bảng */
+}
+
+.product-detail form input[type="text"],
+.product-detail form input[type="file"],
+.product-detail form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #a56b6b;
+  border-radius: 4px;
+  font-size: 20px; /* Kích thước chữ cho các phần tử input và select */
+}
+
+.product-detail form input[type="submit"] {
+  padding: 0.5rem 1rem;
+  border: 1px solid #908282;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 20px; /* Kích thước chữ cho nút submit */
+}
+
+.product-detail form input[type="submit"]:hover {
+  background-color: #ddd;
+}
+
+.product-detail-container table {
+  width: 100%;
+  margin: 0 auto; /* Căn giữa bảng */
+}
+
+.product-detail-container td {
+  padding: 10px;
+  text-align: left; /* Căn trái cho nội dung */
+}
+
+.product-detail-container img {
+  display: block;
+  margin: 0 0 0 50px; /* Căn lề để hình ảnh cách xa form */
+  width: 800px; /* Điều chỉnh kích thước ảnh */
+  height: auto;
+}
+
+/* Định dạng cho Product List */
+.product-list-container {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border: 2px solid #000;
+  margin-top: 20px;
+  font-size: 20px; /* Kích thước chữ cho toàn bộ Product List */
+}
+
+.product-list-container h2 {
+  border: 1px solid #000;
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin: 0 auto; /* Canh giữa khung */
+  max-width: 400px; /* Điều chỉnh độ rộng của khung */
+  background: rgba(255, 255, 255, 0.8); /* Màu nền cho khung Product List */
+  font-size: 30px; /* Kích thước chữ cho tiêu đề Product List */
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+}
+
+.product-table th,
+.product-table td {
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #000;
+  font-size: 24px; /* Kích thước chữ cho bảng */
+}
+
+.product-table th {
+  background-color: rgb(230, 8, 8);
+  color: rgb(0, 0, 0);
+  font-size: 25px; /* Kích thước chữ cho header bảng */
+}
+
+.product-table tr:nth-child(even) {
+  background-color: #8bc5f8;
+}
+
+.product-table tr:hover {
+  background-color: #ddd;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px; /* Khoảng cách giữa các số trang */
+  background-color: #7bc7f4; /* Màu nền cho khung số trang */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.pagination span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px; /* Kích thước của khung hình tròn */
+  height: 30px;
+  border: 2px solid #000; /* Viền của khung hình tròn */
+  border-radius: 50%; /* Bo tròn khung */
+  background-color: #fff; /* Màu nền bên trong khung */
+  font-size: 20px; /* Kích thước chữ */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination span:hover {
+  background-color: #ddd; /* Màu nền khi di chuột qua */
+}
+
+.pagination span.active {
+  background-color: #f0f0f0; /* Màu nền cho số trang đang được chọn */
+}
+
+/* Orders */
+/* Định dạng chung cho container của Order */
+.order-container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(175, 160, 160, 0.7);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid #000; /* Thêm viền cho toàn bộ khung */
+}
+
+/* Định dạng cho phần Order List */
+.order-list-container {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border: 2px solid #000;
+  margin-top: 20px;
+}
+
+.order-list-container h2 {
+  border: 1px solid #000;
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin: 0 auto; /* Canh giữa khung */
+  max-width: 400px; /* Điều chỉnh độ rộng của khung */
+  background: rgba(255, 255, 255, 0.8); /* Màu nền cho khung Order List */
+  font-size: 30px; /* Kích thước chữ */
+  font-weight: bold; /* In đậm chữ */
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  font-size: 20px; /* Kích thước chữ */
+}
+
+.order-table th,
+.order-table td {
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #000;
+  font-weight: bold; /* In đậm chữ */
+  font-size: 22px; /* Kích thước chữ */
+}
+
+.order-table th {
+  background-color: rgb(230, 8, 8);
+  color: rgb(0, 0, 0);
+  font-size: 26px; /* Kích thước chữ */
+}
+
+.order-table tr:nth-child(even) {
+  background-color: #8bc5f8;
+}
+
+.order-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Định dạng cho phần Order Detail */
+.order-detail-container {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border: 2px solid #000;
+  margin-top: 20px;
+}
+
+.order-detail-container h2 {
+  border: 1px solid #000;
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin: 0 auto; /* Canh giữa khung */
+  max-width: 400px; /* Điều chỉnh độ rộng của khung */
+  background: rgba(255, 255, 255, 0.8); /* Màu nền cho khung Order Detail */
+  font-size: 30px; /* Kích thước chữ */
+  font-weight: bold; /* In đậm chữ */
+}
+
+.order-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  font-size: 22px; /* Kích thước chữ */
+}
+
+.order-detail-table th,
+.order-detail-table td {
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #000;
+  font-weight: bold; /* In đậm chữ */
+  font-size: 22px; /* Kích thước chữ */
+}
+
+.order-detail-table th {
+  background-color: rgb(230, 8, 8);
+  color: rgb(0, 0, 0);
+  font-size: 26px; /* Kích thước chữ */
+}
+
+.order-detail-table tr:nth-child(even) {
+  background-color: #8bc5f8;
+}
+
+.order-detail-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Customer */
+.customer-container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(175, 160, 160, 0.7);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid #000; /* Thêm viền cho toàn bộ khung */
+}
+
+.customer-container h2 {
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.customer-container,
+.order-list,
+.order-detail {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border: 2px solid #000; /* Thêm viền cho các phần Customer List, Order List và Order Detail */
+}
+
+.customer-list table,
+.order-list table,
+.order-detail table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.customer-container th,
+.customer-container td,
+.order-list th,
+.order-list td,
+.order-detail th,
+.order-detail td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #000;
+  font-size: 2em; /* Kích thước chữ */
+  font-weight: bold; /* In đậm chữ */
+}
+
+.customer-list th,
+.order-list th,
+.order-detail th {
+  background-color: rgb(230, 8, 8);
+  color: #000;
+}
+
+.customer-list tr:nth-child(even),
+.order-list tr:nth-child(even),
+.order-detail tr:nth-child(even) {
+  background-color: #8bc5f8;
+}
+
+.customer-list tr:hover,
+.order-list tr:hover,
+.order-detail tr:hover {
+  background-color: #ddd;
+}
+
+.customer-list .link,
+.order-list .link {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+.table th {
+  background-color: rgb(230, 8, 8);
+  color: rgb(0, 0, 0);
+}
+
+.table tr:nth-child(even) {
+  background-color: #8bc5f8;
+}
+
+.table tr:hover {
+  background-color: #ddd;
+}
+
+/* Prders 642 */
+/* Prders 514 */
+/* Product 331 */
+/*Category 187 */
